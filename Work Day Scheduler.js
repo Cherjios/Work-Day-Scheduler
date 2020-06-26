@@ -2,7 +2,8 @@ $(document).ready(function(){
 
     //This function is to set todays day and time
     $("#todayIs").text(moment().format('LLLL'));
-
+    var currentTime = moment().format('LTS');
+    
     
     
 
@@ -16,13 +17,21 @@ $(document).ready(function(){
        var Text9am = $("<p>").text(InputText);
         $("#text9am").append(Text9am);
         $("#chores").text("");
-
-       
-
         console.log(InputText);
-
-
     });
+    //Change text color with the time 
+   if (currentTime === 9){
+       $("#text9am").toggleClass("bg-success");
+   }else if(currentTime < 9){
+    $("#text9am").toggleClass("bg-danger");
+   }else{
+    $("#text9am").toggleClass("bg-light");
+   }
+   
+
+
+
+
 
 
 });
