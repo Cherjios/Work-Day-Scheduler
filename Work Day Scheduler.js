@@ -16,7 +16,6 @@ $(document).ready(function(){
 
        var Text9am = $("<p>").text(InputText);
         $("#text9am").append(Text9am);
-        $("#chores09").text("");
         console.log(InputText);
     });
     //Change text color with the time 9 am
@@ -37,7 +36,6 @@ $(document).ready(function(){
 
        var Text10am = $("<p>").text(InputText);
         $("#text10am").append(Text10am);
-        $("#chores10").text("");
         console.log(InputText);
     });
     //Change text color with the time 10 am
@@ -51,15 +49,13 @@ $(document).ready(function(){
    
     //Function to write chores to the box 11 am
     $("#button11").on("click", function(event){
-    // event.preventDefault() prevents the form from trying to submit itself.
-    event.preventDefault();
+        // event.preventDefault() prevents the form from trying to submit itself.
+        event.preventDefault();
 
-    var InputText = $("#chores11").val().trim();
-
-    var Text11am = $("<p>").text(InputText);
-    $("#text11am").append(Text11am);
-    $("#chores11").text("");
-    console.log(InputText);
+        var InputText = $("#chores11").val().trim();
+        var Text11am = $("<p>").text(InputText);
+        $("#text11am").append(Text11am);
+        
     });
     //Change text color with the time 11 am
     if (currentTime === 11){
@@ -70,7 +66,7 @@ $(document).ready(function(){
     $("#text11am").toggleClass("bg-light");
     }
 
-    //Function to write chores to the box 12 am
+    //Function to write chores to the box 12 pm
     $("#button12").on("click", function(event){
         // event.preventDefault() prevents the form from trying to submit itself.
         event.preventDefault();
@@ -79,9 +75,9 @@ $(document).ready(function(){
     
         var Text12pm = $("<p>").text(InputText);
         $("#text12pm").append(Text12pm);
-        $("#chores12").text("");
         console.log(InputText);
-        });
+    });
+
         //Change text color with the time 12 pm
         if (currentTime === 12){
         $("#text12pm").toggleClass("bg-success");
@@ -91,6 +87,26 @@ $(document).ready(function(){
         $("#text12pm").toggleClass("bg-light");
         }
 
+    //Function to write chores to the box 1 pm
+    $("#button1").on("click", function(event){
+        // event.preventDefault() prevents the form from trying to submit itself.
+        event.preventDefault();
+    
+        var InputText = $("#chores1").val().trim();
+    
+        var Text1pm = $("<p>").text(InputText);
+        $("#text1pm").append(Text1pm);
+        console.log(InputText);
+    });
+
+        //Change text color with the time 1pm
+        if (currentTime === 1){
+        $("#text1pm").toggleClass("bg-success");
+        }else if(currentTime < 12){
+        $("#text1pm").toggleClass("bg-danger");
+        }else{
+        $("#text1pm").toggleClass("bg-light");
+        }
 
 
   
