@@ -102,7 +102,7 @@ $(document).ready(function(){
         //Change text color with the time 1pm
         if (currentTime === 1){
         $("#text1pm").toggleClass("bg-success");
-        }else if(currentTime < 12){
+        }else if(currentTime < 1){
         $("#text1pm").toggleClass("bg-danger");
         }else{
         $("#text1pm").toggleClass("bg-light");
@@ -121,12 +121,33 @@ $(document).ready(function(){
     });
 
         //Change text color with the time 2pm
-        if (currentTime === 1){
+        if (currentTime === 2){
         $("#text2pm").toggleClass("bg-success");
-        }else if(currentTime < 12){
+        }else if(currentTime < 2){
         $("#text2pm").toggleClass("bg-danger");
         }else{
         $("#text2pm").toggleClass("bg-light");
+        }
+
+    //Function to write chores to the box 3pm
+    $("#button3").on("click", function(event){
+        // event.preventDefault() prevents the form from trying to submit itself.
+        event.preventDefault();
+    
+        var InputText = $("#chores3").val().trim();
+    
+        var Text3pm = $("<p>").text(InputText);
+        $("#text3pm").append(Text3pm);
+        console.log(InputText);
+    });
+
+        //Change text color with the time 3pm
+        if (currentTime === 3){
+        $("#text3pm").toggleClass("bg-success");
+        }else if(currentTime < 3){
+        $("#text3pm").toggleClass("bg-danger");
+        }else{
+        $("#text3pm").toggleClass("bg-light");
         }
 
   
