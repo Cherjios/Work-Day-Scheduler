@@ -49,14 +49,14 @@ $(document).ready(function(){
     $("#text10am").toggleClass("bg-light");
    }
    
-   //Function to write chores to the box 11 am
-   $("#button11").on("click", function(event){
+    //Function to write chores to the box 11 am
+    $("#button11").on("click", function(event){
     // event.preventDefault() prevents the form from trying to submit itself.
     event.preventDefault();
 
     var InputText = $("#chores11").val().trim();
 
-   var Text11am = $("<p>").text(InputText);
+    var Text11am = $("<p>").text(InputText);
     $("#text11am").append(Text11am);
     $("#chores11").text("");
     console.log(InputText);
@@ -69,6 +69,28 @@ $(document).ready(function(){
     }else{
     $("#text11am").toggleClass("bg-light");
     }
+
+    //Function to write chores to the box 12 am
+    $("#button12").on("click", function(event){
+        // event.preventDefault() prevents the form from trying to submit itself.
+        event.preventDefault();
+    
+        var InputText = $("#chores12").val().trim();
+    
+        var Text12pm = $("<p>").text(InputText);
+        $("#text12pm").append(Text12pm);
+        $("#chores12").text("");
+        console.log(InputText);
+        });
+        //Change text color with the time 12 pm
+        if (currentTime === 12){
+        $("#text12pm").toggleClass("bg-success");
+        }else if(currentTime < 12){
+        $("#text12pm").toggleClass("bg-danger");
+        }else{
+        $("#text12pm").toggleClass("bg-light");
+        }
+
 
 
   
