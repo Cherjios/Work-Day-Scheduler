@@ -4,9 +4,6 @@ $(document).ready(function(){
     $("#todayIs").text(moment().format('LLLL'));
     var currentTime = moment().format('LTS');
     
-    
-    
-
     //Function to write chores to the box 9 am
     $("#button9").on("click", function(event){
         // event.preventDefault() prevents the form from trying to submit itself.
@@ -191,6 +188,14 @@ $(document).ready(function(){
         $("#text5pm").toggleClass("bg-light");
         }
         
+        // //Clear content at midnight;
+        // if (currentTime === 24){
+        //     $("#text5pm").toggleClass("bg-success");
+        //     }else if(currentTime < 5){
+        //     $("#text5pm").toggleClass("bg-danger");
+        //     }else{
+        //     $("#text5pm").toggleClass("bg-light");
+        //     }
 
   
     
