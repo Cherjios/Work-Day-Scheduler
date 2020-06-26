@@ -149,6 +149,48 @@ $(document).ready(function(){
         }else{
         $("#text3pm").toggleClass("bg-light");
         }
+    //Function to write chores to the box 4pm
+    $("#button4").on("click", function(event){
+        // event.preventDefault() prevents the form from trying to submit itself.
+        event.preventDefault();
+    
+        var InputText = $("#chores4").val().trim();
+    
+        var Text4pm = $("<p>").text(InputText);
+        $("#text4pm").append(Text4pm);
+        console.log(InputText);
+    });
+
+        //Change text color with the time 4pm
+        if (currentTime === 4){
+        $("#text4pm").toggleClass("bg-success");
+        }else if(currentTime < 4){
+        $("#text4pm").toggleClass("bg-danger");
+        }else{
+        $("#text4pm").toggleClass("bg-light");
+        }
+
+    //Function to write chores to the box 5pm
+    $("#button5").on("click", function(event){
+        // event.preventDefault() prevents the form from trying to submit itself.
+        event.preventDefault();
+    
+        var InputText = $("#chores5").val().trim();
+    
+        var Text5pm = $("<p>").text(InputText);
+        $("#text5pm").append(Text5pm);
+        console.log(InputText);
+    });
+
+        //Change text color with the time 5pm
+        if (currentTime === 5){
+        $("#text5pm").toggleClass("bg-success");
+        }else if(currentTime < 5){
+        $("#text5pm").toggleClass("bg-danger");
+        }else{
+        $("#text5pm").toggleClass("bg-light");
+        }
+        
 
   
     
