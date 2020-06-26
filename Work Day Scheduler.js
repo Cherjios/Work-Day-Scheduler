@@ -15,9 +15,11 @@ $(document).ready(function(){
 
        var Text9am = $("<p>").text(InputText);
         $("#text9am").append(Text9am);
+        $("#chores").text("");
+
+       
 
         console.log(InputText);
-
 
 
     });
