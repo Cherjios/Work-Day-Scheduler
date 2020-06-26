@@ -4,6 +4,10 @@ $(document).ready(function(){
     $("#todayIs").text(moment().format('LLLL'));
     var currentTime = moment().format('LTS');
     
+    var storage9 = []; 
+
+    init9();
+
     //Function to write chores to the box 9 am
     $("#button9").on("click", function(event){
         // event.preventDefault() prevents the form from trying to submit itself.
@@ -13,7 +17,9 @@ $(document).ready(function(){
 
        var Text9am = $("<p>").text(InputText);
         $("#text9am").append(Text9am);
+        
         console.log(InputText);
+        console.log(localStorage);
     });
     //Change text color with the time 9 am
    if (currentTime === 9){
@@ -204,7 +210,21 @@ $(document).ready(function(){
         }
             
      
-          console.log(localStorage);
+        function init9() {
+            // Get stored todos from localStorage
+            // Parsing the JSON string to an object
+            var storedTodos9 = JSON.parse(localStorage.getItem("InputText9"));
+          
+            // If todos were retrieved from localStorage, update the todos array to it
+            if (storedTodos9 !== null) {
+                for(var i = 0; i<= storedTodos9.length; i++){
+                    Text9am = $("<p>").text(storedTodos9);
+                    $("#text9am").append(Text9am);
+                }
+                
+            }
+          
+          }
 
 
 
