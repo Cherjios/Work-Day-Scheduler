@@ -1,0 +1,1 @@
+$("#todayIs").text(moment().format('LLLL'));
