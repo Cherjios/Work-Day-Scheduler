@@ -108,6 +108,26 @@ $(document).ready(function(){
         $("#text1pm").toggleClass("bg-light");
         }
 
+    //Function to write chores to the box 2 pm
+    $("#button2").on("click", function(event){
+        // event.preventDefault() prevents the form from trying to submit itself.
+        event.preventDefault();
+    
+        var InputText = $("#chores2").val().trim();
+    
+        var Text2pm = $("<p>").text(InputText);
+        $("#text2pm").append(Text2pm);
+        console.log(InputText);
+    });
+
+        //Change text color with the time 2pm
+        if (currentTime === 1){
+        $("#text2pm").toggleClass("bg-success");
+        }else if(currentTime < 12){
+        $("#text2pm").toggleClass("bg-danger");
+        }else{
+        $("#text2pm").toggleClass("bg-light");
+        }
 
   
     
