@@ -188,14 +188,19 @@ $(document).ready(function(){
         $("#text5pm").toggleClass("bg-light");
         }
         
-        // //Clear content at midnight;
-        // if (currentTime === 24){
-        //     $("#text5pm").toggleClass("bg-success");
-        //     }else if(currentTime < 5){
-        //     $("#text5pm").toggleClass("bg-danger");
-        //     }else{
-        //     $("#text5pm").toggleClass("bg-light");
-        //     }
+        //Clear content at midnight;
+        if (currentTime === 24){
+            Text9am.remove();
+            Text10am.remove();
+            Text11am.remove();
+            Text12pm.remove();
+            Text1pm.remove();
+            Text2pm.remove();
+            Text3pm.remove();
+            Text4pm.remove();
+            Text5pm.remove();
+        }
+            
 
   
     
